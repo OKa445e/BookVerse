@@ -17,7 +17,7 @@ const Setting = () => {
   useEffect(() => {
     const fetch = async () => {
       const response = await axios.get(
-        "http://localhost:4000/api/v1/user/user-information",
+        "https://bookapi-e12b.onrender.com/api/v1/user/user-information",
         { headers }
       );
       setProfileData(response.data);
@@ -28,7 +28,7 @@ const Setting = () => {
 
   const submitAddress = async () => {
     const response = await axios.put(
-      "http://localhost:4000/api/v1/user/update-address",
+      "https://bookapi-e12b.onrender.com/api/v1/user/update-address",
       value,
       { headers }
     );

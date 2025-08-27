@@ -16,7 +16,7 @@ const UserOrderHistory = () => {
     const fetch = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/v1/order/orderhistory",
+          "https://bookapi-e12b.onrender.com/api/v1/order/orderhistory",
           { headers }
         );
         setOrderHistory(response.data.data);
@@ -33,7 +33,7 @@ const UserOrderHistory = () => {
   const clearOrderHistory = async () => {
     try {
       const response = await axios.delete(
-        "http://localhost:4000/api/v1/order/clearorderhistory",
+        "https://bookapi-e12b.onrender.com/api/v1/order/clearorderhistory",
         { headers }
       );
       setOrderHistory([]); // Clear the local state after successful deletion

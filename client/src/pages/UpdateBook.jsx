@@ -38,7 +38,7 @@ const UpdateBook = () => {
         toast.error("All fields are required");
       else {
         const response = await axios.put(
-          `http://localhost:4000/api/v1/book//update-book`,
+          `https://bookapi-e12b.onrender.com/api/v1/book//update-book`,
           data,
          {headers}
         );
@@ -64,7 +64,7 @@ const UpdateBook = () => {
   useEffect(() => {
     const fetch = async () => {
       const response = await axios.get(
-        `http://localhost:4000/api/v1/book/${id}`
+        `https://bookapi-e12b.onrender.com/api/v1/book/${id}`
       );
       setData(response.data.data);
     };

@@ -21,7 +21,7 @@ const Cart = () => {
     const fetch = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/v1/cart/allcarts",
+          "https://bookapi-e12b.onrender.com/api/v1/cart/allcarts",
           { headers }
         );
         setCart(response.data.data);
@@ -40,7 +40,7 @@ const Cart = () => {
   const deleteItem = async (bookid) => {
     try {
       const response = await axios.put(
-        `http://localhost:4000/api/v1/cart/removecart/${bookid}`,
+        `https://bookapi-e12b.onrender.com/api/v1/cart/removecart/${bookid}`,
         {},
         { headers }
       );
@@ -73,7 +73,7 @@ const Cart = () => {
         quantity: quantities[item._id],
       }));
       const response = await axios.post(
-        "http://localhost:4000/api/v1/order/placeorder",
+        "https://bookapi-e12b.onrender.com/api/v1/order/placeorder",
         { order },
         { headers }
       );
@@ -91,7 +91,7 @@ const Cart = () => {
   const ClearCart = async () => {
     try {
       const response = await axios.delete(
-        "http://localhost:4000/api/v1/cart/clearcart",
+        "https://bookapi-e12b.onrender.com/api/v1/cart/clearcart",
         { headers }
       );
       toast.success(response.data.message);

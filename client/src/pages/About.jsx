@@ -29,7 +29,7 @@ const About = () => {
       try {
         
         const response = await axios.post(
-          "http://localhost:4000/api/v1/contact/contactus",
+          "https://bookapi-e12b.onrender.com/api/v1/contact/contactus",
           query
         );
         toast.success(response.data.message); 

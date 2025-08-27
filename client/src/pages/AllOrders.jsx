@@ -21,7 +21,7 @@ const AllOrders = () => {
   useEffect(() => {
     const fetch = async () => {
       const response = await axios.get(
-        "http://localhost:4000/api/v1/order/getallorders",
+        "https://bookapi-e12b.onrender.com/api/v1/order/getallorders",
         { headers }
       );
       const groupedOrders = groupOrdersByBook(response.data.data);
@@ -51,7 +51,7 @@ const AllOrders = () => {
   const submitChanges = async (i) => {
     const id = allOrders[i]._id;
     const response = await axios.put(
-      `http://localhost:4000/api/v1/order/statusupdate/${id}`,
+      `https://bookapi-e12b.onrender.com/api/v1/order/statusupdate/${id}`,
       values,
       { headers }
     );

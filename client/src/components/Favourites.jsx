@@ -13,7 +13,7 @@ import BookCard from "./BookCard";
     const fetch = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/v1/favourite/allfavouritebooks",
+          "https://bookapi-e12b.onrender.com/api/v1/favourite/allfavouritebooks",
           { headers }
         );
         setFavourite(response.data.data);

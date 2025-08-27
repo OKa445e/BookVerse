@@ -29,7 +29,7 @@ export const SignUp = () => {
         toast.error("All fields are required!");
       } else {
         const response = await axios.post(
-          "http://localhost:4000/api/v1/user/signup",
+          "https://bookapi-e12b.onrender.com/api/v1/user/signup",
           values
         );
         toast.success(response.data.message); 
